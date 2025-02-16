@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频字幕滚动窗口</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .subtitle-container {
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .subtitle-line {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="audioPlayer" controls>
+        <source src="https://res.wx.qq.com/voice/getvoice?mediaid=Mzk2NDc0Mjc1M18xMDAwMDAwMDM=" type="audio/mpeg">
+        你的浏览器不支持音频播放。
+    </audio>
+    <div class="subtitle-container" id="subtitleContainer">
+        <div class="subtitle-line" data-time="00:00:02">The most important thing is not to criticize your place. The most<br>最重要的是，别老批评自己的家乡。最</div>
+        <div class="subtitle-line" data-time="00:00:06">important thing is to let foreigners understand<br>重要的是，得让外国人了解</div>
+        <div class="subtitle-line" data-time="00:00:10">the good face of your place and your culture. <br>你家乡的美好一面以及当地的文化。</div>
+        <div class="subtitle-line" data-time="00:00:15">Because if they understand, they can have another <br>因为要是他们了解了，对这个地方就会有不一样的</div>
+        <div class="subtitle-line" data-time="00:00:19">example of this place. Because outside everyone <br>看法。在外面，每个人</div>
+        <div class="subtitle-line" data-time="00:00:23">is talking<br>都在说</div>
+        <div class="subtitle-line" data-time="00:00:26">very bad about this place and this is very easy <br>这个地方的坏话，而这是在外面取得成功的捷径。</div>
+        <div class="subtitle-line" data-time="00:00:30">way to have success outside you. Can I give<br>我能举个例子吗？</div>
+        <div class="subtitle-line" data-time="00:00:35">you an example? Ai Weiwei. Oh Yeah, Ai Weiwei. I know him. <br>艾未未。哦，对，艾未未。我知道他。</div>
+        <div class="subtitle-line" data-time="00:00:39">Yes. I don't. <br>是他，我不。</div>
+        <div class="subtitle-line" data-time="00:00:43">You know. But I don't agree. You don't like him?<br>你认识。但我不认同他。你不喜欢他吗？</div>
+        <div class="subtitle-line" data-time="00:00:46">No, you know why? Because it's just to<br>不，你知道为啥吗？因为他就是想</div>
+        <div class="subtitle-line" data-time="00:00:51">try to find a very easy success<br>轻轻松松地获得成功</div>
+        <div class="subtitle-line" data-time="00:00:58">being a stupid slave<br>当个愚蠢的奴才</div>
+        <div class="subtitle-line" data-time="00:01:02">of another kind of powerful system but<br>效忠于另一种强大的体系，也就是</div>
+        <div class="subtitle-line" data-time="00:01:06">Western system. Oh yeah. <br>西方体系。哦，没错。</div>
+        <div class="subtitle-line" data-time="00:01:09">So this guy for me cannot have<br>所以在我看来，这个人不值得</div>
+        <div class="subtitle-line" data-time="00:01:12">respect, <br>尊重，</div>
+        <div class="subtitle-line" data-time="00:01:16">you know? Yeah I know. I can totally understand this <br>你懂吧？嗯，我懂。我完全能理解这一点，</div>
+        <div class="subtitle-line" data-time="00:01:20">part because back in like when I graduated form<br>因为我刚大学毕业的时候，大概二十出头，</div>
+        <div class="subtitle-line" data-time="00:01:24">college at the time like early 20s and I also sort <br>我也被这类艺术家洗脑过。他们一直在这儿</div>
+        <div class="subtitle-line" data-time="00:01:29">of brainwashed by these kind of artists too. They are<br>诋毁、批评这个地方，</div>
+        <div class="subtitle-line" data-time="00:01:32">just trashed and criticized here like <br>没完没了，而且</div>
+        <div class="subtitle-line" data-time="00:01:37">non stop and also<br>你知道吗，YouTube 上有些人</div>
+        <div class="subtitle-line" data-time="00:01:40">you know there are some people on Youtube<br>也在干同样的事儿，</div>
+        <div class="subtitle-line" data-time="00:01:43">they also have been doing this same thing and <br>这会让我们看不到</div>
+        <div class="subtitle-line" data-time="00:01:48">this will just block us from seeing like the real truth<br>事情的真相，</div>
+        <div class="subtitle-line" data-time="00:01:52">and what is really going on. Of course. <br>也不知道到底发生了什么。那当然。</div>
+        <div class="subtitle-line" data-time="00:01:55">and those people also like have their own agenda<br>而且那些人也都有自己的小算盘，</div>
+        <div class="subtitle-line" data-time="00:01:57">oh, criticize and trash this place<br>就是诋毁、批评这个地方，</div>
+        <div class="subtitle-line" data-time="00:02:01">then people want to move out<br>这样一来人们就想搬走，</div>
+        <div class="subtitle-line" data-time="00:02:03">and if you want to immigrate to Maybe the US, Canada<br>要是你想移民去美国、加拿大啥的，</div>
+        <div class="subtitle-line" data-time="00:02:09">come to me, I can, I have the resources<br>就来找我，我有门路。</div>
+        <div class="subtitle-line" data-time="00:02:12">See, make money.<br>瞧见没，就是为了赚钱。</div>
+    </div>
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        const subtitleContainer = document.getElementById('subtitleContainer');
+        const subtitleLines = subtitleContainer.querySelectorAll('.subtitle-line');
+
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            for (let i = 0; i < subtitleLines.length; i++) {
+                const line = subtitleLines[i];
+                const timeStr = line.dataset.time;
+                const [hours, minutes, seconds] = timeStr.split(':').map(Number);
+                const startTime = hours * 3600 + minutes * 60 + seconds;
+
+                if (currentTime >= startTime) {
+                    line.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
